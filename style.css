@@ -1,0 +1,314 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #080b14;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    margin: 55px 0;
+}
+
+header h1 {
+    font-size: 38px;
+    letter-spacing: 4px;
+    background: linear-gradient(90deg, #00eaff, #a020f0, #ff00a6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+header p {
+    color: #929bad;
+    margin-top: 12px;
+}
+
+main {
+    width: 95%;
+    max-width: 1250px;
+    margin: auto;
+    background: #111827;
+    border: 1px solid #29334a;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.counter {
+    color: #00eaff;
+    font-size: 18px;
+}
+
+button {
+    background: #171f32;
+    color: white;
+    border: 1px solid #00eaff;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00bcd4;
+    color: black;
+}
+
+.section-title {
+    color: #00eaff;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.keyboard-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#keyboard, #numpad {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.keyboard-row, .num-row {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+}
+
+.key {
+    min-width: 48px;
+    height: 53px;
+    background: #202a40;
+    border: 1px solid #3a4965;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #dce6f5;
+    transition: 0.15s;
+    box-shadow: 0 4px 0 #101827;
+    user-select: none;
+}
+
+.key.wide {
+    min-width: 75px;
+}
+
+.key.space {
+    flex: 1;
+    max-width: 350px;
+}
+
+.key.active {
+    background: #00d9ff;
+    color: #06101c;
+    border-color: white;
+    box-shadow: 0 0 15px #00d9ff, 0 0 30px #00d9ff;
+    transform: translateY(3px);
+}
+
+#numpad .key {
+    min-width: 48px;
+}
+
+.num-zero {
+    flex: 2;
+}
+
+.hint {
+    text-align: center;
+    margin-top: 30px;
+    color: #8290a8;
+    font-size: 14px;
+}
+
+.divider {
+    height: 1px;
+    background: #29334a;
+    margin: 40px 0;
+}
+
+.mouse-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.mouse {
+    width: 150px;
+    height: 240px;
+    background: #202a40;
+    border: 3px solid #53627c;
+    border-radius: 75px 75px 55px 55px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mouse-buttons {
+    display: flex;
+    height: 100px;
+    border-bottom: 2px solid #53627c;
+}
+
+.mouse-button {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: bold;
+    color: #dce6f5;
+    cursor: pointer;
+}
+
+.mouse-button:first-child {
+    border-right: 2px solid #53627c;
+}
+
+.mouse-wheel {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 19px;
+    height: 55px;
+    border: 2px solid #00eaff;
+    border-radius: 10px;
+    background: #111827;
+}
+
+.mouse-button.active, .mouse-wheel.active {
+    background: #00d9ff;
+    color: #06101c;
+    box-shadow: 0 0 20px #00d9ff;
+}
+
+.mouse-info {
+    min-width: 230px;
+}
+
+.mouse-info p {
+    background: #202a40;
+    padding: 13px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #3a4965;
+}
+
+.mouse-info span {
+    color: #ff5577;
+    font-weight: bold;
+}
+
+.mouse-info span.tested {
+    color: #00eaff;
+}
+
+.youtube-footer {
+    width: 95%;
+    max-width: 1250px;
+    margin: 35px auto;
+    padding: 25px;
+    background: #111827;
+    border: 1px solid #29334a;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.channel-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.youtube-icon {
+    background: #ff0033;
+    padding: 14px;
+    border-radius: 12px;
+    color: white;
+    font-size: 22px;
+}
+
+.channel-info h2 {
+    color: white;
+    font-size: 18px;
+}
+
+.channel-info p {
+    color: #929bad;
+    margin-top: 5px;
+}
+
+.subscribe-button {
+    background: #ff0033;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.subscribe-button:hover {
+    background: #cc0029;
+    box-shadow: 0 0 25px #ff0033;
+    transform: scale(1.05);
+}
+
+.footer-text {
+    width: 100%;
+    text-align: center;
+    color: #8290a8;
+    font-size: 12px;
+}
+
+@media (max-width: 1000px) {
+    main {
+        overflow-x: auto;
+    }
+
+    .keyboard-layout {
+        width: max-content;
+        margin: auto;
+    }
+}
+
+@media (max-width: 750px) {
+    header h1 {
+        font-size: 25px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .mouse-area {
+        gap: 25px;
+    }
+}
